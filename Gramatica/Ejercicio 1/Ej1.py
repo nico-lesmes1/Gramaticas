@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# Ej1.py – validador de capicúas binarias
-
 import pathlib
 
 def es_capicua(s: str) -> bool:

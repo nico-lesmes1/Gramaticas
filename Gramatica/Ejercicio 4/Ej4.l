@@ -8,7 +8,7 @@
 ab          { yylval.s = strdup(yytext); return AB; }
 abb         { yylval.s = strdup(yytext); return ABB; }
 \n          { return NL; }
-[ \t\r]     { /* ignorar */ }
+[ \t\r]     { }
 .           { return BAD; }
 %%
 

@@ -7,8 +7,8 @@
 %%
 [01]+      { yylval.s = strdup(yytext); return BIN; }
 \n         { return NL; }
-[ \t\r]    { /* ignorar espacios */ }
-[^ \t\r\n01]+  { /* cualquier cadena ilegal → ignoro */ return BAD; }
+[ \t\r]    { }
+[^ \t\r\n01]+  { return BAD; }
 %%
 
 int yywrap(void) { return 1; }

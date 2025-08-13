@@ -9,7 +9,6 @@ def validar(linea: str) -> None:
     linea = linea.strip()
     if not linea:
         return
-    # divide en ^a+b+$ obligatoriamente
     m = re.fullmatch(r'(a+)(b+)', linea)
     if not m:
         print("No acepta")

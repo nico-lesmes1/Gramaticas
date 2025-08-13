@@ -1,4 +1,3 @@
-/* Ej2.l */
 %{
 #include "Ej2.tab.h"
 %}

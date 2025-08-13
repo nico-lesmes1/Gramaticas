@@ -19,11 +19,11 @@ input:
     ;
 
 line: BIN NL {
-        printf("%s\n", es_capicua($1) ? "Acepto" : "No acepto");
+        printf("%s\n", es_capicua($1) ? "Acepta" : "No acepta");
         free($1);
     }
-    | BAD NL { printf("No acepta\n"); }   /* línea con solo basura */
-    | NL     { /* línea vacía */ }
+    | BAD NL { printf("No acepta\n"); } 
+    | NL     { }
     ;
 %%
 
@@ -34,5 +34,5 @@ int es_capicua(const char *s) {
     return 1;
 }
 
-void yyerror(const char *s) { /* ya no debería saltar */ }
+void yyerror(const char *s) { }
 int main(void) { yyparse(); return 0; }

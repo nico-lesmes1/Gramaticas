@@ -9,7 +9,7 @@ a+          { yylval.s = strdup(yytext); return ASEQ; }
 b+          { yylval.s = strdup(yytext); return BSEQ; }
 \n          { return NL; }
 [ \t\r]     { /* ignorar */ }
-.           { return BAD; }   /* cualquier otro carácter */
+.           { return BAD; }  
 %%
 
 int yywrap(void) { return 1; }

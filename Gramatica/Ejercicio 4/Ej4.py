@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# Ej4.py – validador de G₄ = {ab, abb}
-
 import pathlib
 
 def validar(linea: str) -> None:

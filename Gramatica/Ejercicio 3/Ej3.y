@@ -6,7 +6,6 @@
 int yylex(void);
 void yyerror(const char *s);
 
-/* verifica si |a| = n y |b| = n+1 */
 int forma_correcta(const char *as, const char *bs);
 %}
 
@@ -36,5 +35,5 @@ int forma_correcta(const char *as, const char *bs) {
     return na + 1 == nb;
 }
 
-void yyerror(const char *s) { /* silenciar */ }
+void yyerror(const char *s) { }
 int main(void) { yyparse(); return 0; }

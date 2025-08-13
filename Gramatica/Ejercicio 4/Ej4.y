@@ -20,9 +20,9 @@ input:
 line: AB  NL { printf("Acepta\n");  free($1); }
     | ABB NL { printf("Acepta\n");  free($1); }
     | BAD NL { printf("No acepta\n"); }
-    | NL     { /* línea vacía */ }
+    | NL     { }
     ;
 %%
 
-void yyerror(const char *s) { /* silenciar */ }
+void yyerror(const char *s) { }
 int main(void) { yyparse(); return 0; }

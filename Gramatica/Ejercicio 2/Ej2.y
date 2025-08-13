@@ -1,4 +1,3 @@
-/* Ej2.y */
 %{
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,9 +8,8 @@ void yyerror(const char *s);
 
 %token A B NL
 
-%%   /* ---------- grammar rules ---------- */
 start : S NL          { printf("Acepta\n"); }
-      | NL            { printf("Acepta\n"); }   /* empty file is NOT in L(G) */
+      | NL            { printf("Acepta\n"); }   
       | error NL      { printf("No acepta\n"); }
       ;
 
@@ -27,4 +25,4 @@ int main(int argc, char **argv) {
     return yyparse();
 }
 
-void yyerror(const char *s) { /* do nothing, handled in grammar */ }
+void yyerror(const char *s) { }

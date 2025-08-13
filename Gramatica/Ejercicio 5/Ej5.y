@@ -13,7 +13,7 @@ int validate_grammar(const char *s) {
     
     // Verificar el patrón a(ab)*b
     for (int i = 1; i < n-1; i += 2) {
-        if (i+1 >= n-1) return 0;  // Longitud impar no válida
+        if (i+1 >= n-1) return 0; 
         if (s[i] != 'b' || s[i+1] != 'a') return 0;
     }
     return 1;

@@ -1,6 +1,8 @@
 # Gramaticas
-##Ejercicio 1
-###Codigo 
+
+## Ejercicio 1
+
+### Codigo 
 Ej1.l
 ```
 %{
@@ -60,4 +62,4 @@ void yyerror(const char *s) { }
 int main(void) { yyparse(); return 0; }
 ```
 Imagen 
-![Logo](./Img/Ej1.png)
+!(https://github.com/nico-lesmes1/Gramaticas/blob/ca874078c811f37be7b823271fb11396d5b1c6e4/Gramatica/Img/Ej1.png)

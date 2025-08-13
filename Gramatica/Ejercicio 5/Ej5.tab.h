@@ -63,7 +63,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 22 "Ej5.y"
+#line 23 "Ej5.y"
  char *s; 
 
 #line 70 "Ej5.tab.h"

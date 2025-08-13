@@ -2,9 +2,7 @@ import sys
 import os
 
 def acepta(cadena: str) -> bool:
-    """
-    L(G) = { a^n b^{n+1} | n >= 0 }
-    """
+
     cadena = cadena.rstrip("\n\r")
     i = 0
     while i < len(cadena) and cadena[i] == 'a':

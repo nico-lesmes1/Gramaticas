@@ -5,7 +5,6 @@ def validar(linea: str) -> None:
     linea = linea.strip()
     if not linea:
         return
-    # ^a(ab)*b$  ==  a (ab)^n b
     if re.fullmatch(r'a(ab)*b', linea):
         print("Acepta")
     else:

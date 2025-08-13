@@ -76,19 +76,20 @@
 int yylex(void);
 void yyerror(const char *s);
 
-int ok2(const char *s) {
+int validate_grammar(const char *s) {
     int n = strlen(s);
-    if (n < 3 || s[0] != 'a' || s[n-1] != 'b') return 0;
-    int a = 1, b = 1;
-    for (int i = 1; i < n-1; ++i) {
-        if (s[i] == 'a') ++a;
-        else if (s[i] == 'b') ++b;
-        else return 0;
+    if (n < 2) return 0;  // Mínimo "ab" (n=2)
+    if (s[0] != 'a' || s[n-1] != 'b') return 0;
+    
+    // Verificar el patrón a(ab)*b
+    for (int i = 1; i < n-1; i += 2) {
+        if (i+1 >= n-1) return 0;  // Longitud impar no válida
+        if (s[i] != 'b' || s[i+1] != 'a') return 0;
     }
-    return a + 1 == b;
+    return 1;
 }
 
-#line 92 "Ej5.tab.c"
+#line 93 "Ej5.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -507,7 +508,7 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    26,    26,    27
+       0,    27,    27,    28
 };
 #endif
 
@@ -1064,13 +1065,13 @@ yyreduce:
   switch (yyn)
     {
   case 3: /* lines: lines LINE  */
-#line 27 "Ej5.y"
-                 { puts(ok2((yyvsp[0].s)) ? "acepto" : "no acepto"); free((yyvsp[0].s)); }
-#line 1070 "Ej5.tab.c"
+#line 28 "Ej5.y"
+                 { puts(validate_grammar((yyvsp[0].s)) ? "Acepta" : "No acepta"); free((yyvsp[0].s)); }
+#line 1071 "Ej5.tab.c"
     break;
 
 
-#line 1074 "Ej5.tab.c"
+#line 1075 "Ej5.tab.c"
 
       default: break;
     }
@@ -1263,7 +1264,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 29 "Ej5.y"
+#line 30 "Ej5.y"
 
 
 void yyerror(const char *s) { /* vacío */ }

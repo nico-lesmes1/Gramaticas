@@ -1060,7 +1060,7 @@ yyreduce:
   case 4: /* line: BIN NL  */
 #line 21 "Ej1.y"
              {
-        printf("%s\n", es_capicua((yyvsp[-1].s)) ? "acepto" : "no acepto");
+        printf("%s\n", es_capicua((yyvsp[-1].s)) ? "Acepto" : "No acepto");
         free((yyvsp[-1].s));
     }
 #line 1067 "Ej1.tab.c"
@@ -1068,7 +1068,7 @@ yyreduce:
 
   case 5: /* line: BAD NL  */
 #line 25 "Ej1.y"
-             { printf("no acepto\n"); }
+             { printf("No acepta\n"); }
 #line 1073 "Ej1.tab.c"
     break;
 

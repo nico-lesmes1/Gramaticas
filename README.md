@@ -414,3 +414,10 @@ with archivo.open() as f:
         validar(ln)
 ```
 
+## Ejercicio 4
+
+<img width="800" height="177" alt="image" src="https://github.com/user-attachments/assets/f798ce9a-3ca4-4c28-88b9-fef3c6cea781" />
+
+
+
+
